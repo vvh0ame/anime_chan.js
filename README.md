@@ -1,10 +1,14 @@
-# anime_chan.py
-Web-API for [animechan.vercel.app](https://animechan.vercel.app) a free restful API that serves quality anime quotes
+# anime_chan.js
+Web-API for [animechan.io](https://animechan.io/) a free restful API that serves quality anime quotes. [Source](https://github.com/Animechan-API/animechan)
 
 ## Example
-```python
-import anime_chan
-anime_chan = anime_chan.AnimeChan()
-random_quote = anime_chan.get_random_quote()
-print(random_quote)
+```JavaScript
+async function main() {
+	const { AnimeChan } = require("./anime_chan.js")
+	const animeChan = new AnimeChan("apiKey")
+	const randomQuote = await animeChan.getRandomQuote()
+	console.log(randomQuote)
+}
+
+main()
 ```
